@@ -30,16 +30,19 @@ A universal gate is a logic gate which can implement any Boolean function withou
 ## Program:
 
 Program to design a Implementation of combinational logic using universal gates-  and verify its truth table in quartus using Verilog programming.
-Developed by: Naramala Niharika
-RegisterNumber:  212221240031
+## Developed by: Naramala Niharika
+## RegisterNumber:  212221240031
 
 ## F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
 
 module Combination(A,B,C,D,F);
 
 input A,B,C,D;
+
 output F;
+
 wire P,Q,R;
+
 assign P = C&(~B)&(~A);
 assign Q = D&(~C)&(~A);
 assign R = (~C)&B&(~A);
@@ -49,9 +52,13 @@ endmodule
 ## F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
 
 module norcombination(A,B,C,D,F);
+
 input A,B,C,D;
+
 output F;
+
 wire P,Q,R,S;
+
 assign P = C&(~B)&A;
 assign Q = D&(~C)&A;
 assign R = C&(~B)&A;
