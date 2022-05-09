@@ -28,7 +28,7 @@ A universal gate is a logic gate which can implement any Boolean function withou
 6.Give the respective inputs for timing diagram and obtain the results.
 
 ## Program:
-/*
+
 Program to design a Implementation of combinational logic using universal gates-  and verify its truth table in quartus using Verilog programming.
 Developed by: Naramala Niharika
 RegisterNumber:  212221240031
@@ -36,6 +36,7 @@ RegisterNumber:  212221240031
 ## F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
 
 module Combination(A,B,C,D,F);
+
 input A,B,C,D;
 output F;
 wire P,Q,R;
@@ -57,7 +58,7 @@ assign R = C&(~B)&A;
 assign S = ~(P|Q|R);
 not(F,S);
 endmodule
-*/
+
 
 ## Output:
 
@@ -69,6 +70,7 @@ endmodule
 ![Output](?raw=true)
 ## Timing diagram :
 ![Output](?raw=true)
+
 ## F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
 
 ## Truthtable:
